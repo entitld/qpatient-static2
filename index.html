@@ -426,72 +426,10 @@ Cannabis Control Commission to consider which aim to improve the <a href="https:
 <p role="status" aria-live="polite" aria-atomic="true"></p>
 <ul></ul>
 </div>
-<form action="https://formspree.io/f/xblydarw" method="POST" class="custom-form init" aria-label="Contact form">
-<div style="margin-bottom: 25px;" class="fusion-one-half fusion-layout-column fusion-spacing-yes"><p><label aria-label="name"><span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name*" value="" type="text" name="your-name"></span></label></p></div>
-<div style="margin-bottom: 25px;" class="fusion-one-half fusion-layout-column fusion-column-last fusion-spacing-yes"><p><label aria-label="phone"><span class="wpcf7-form-control-wrap" data-name="phone-number"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Phone*" value="" type="text" name="phone-number"></span></label></p></div>
-<div style="margin-bottom: 25px;" class="fusion-one-half fusion-layout-column fusion-spacing-yes"><p><label aria-label="email"><span class="wpcf7-form-control-wrap" data-name="email"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email*" value="" type="email" name="email"></span></label></p></div>
-<div style="margin-bottom: 25px;" class="fusion-one-half fusion-layout-column fusion-column-last fusion-spacing-yes"><p><label aria-label="date"><span class="wpcf7-form-control-wrap" data-name="appointment-date"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="What weekday time do you want to meet?*" value="" type="text" name="appointment-date"></span></label></p></div>
-<p style="margin-bottom: 25px;"><label aria-label="message"><span class="wpcf7-form-control-wrap" data-name="your-message"><textarea cols="40" rows="10" maxlength="2000" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Message" name="your-message"></textarea></span></label></p>
-<p><input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="MAKE AN APPOINTMENT"></p>
-
-<style>
-/* Force message field to match other fields */
-.custom-form textarea.wpcf7-textarea {
-    width: 100% !important;
-    background-color: rgba(255,255,255,0.1) !important;
-    border: 1px solid rgba(255,255,255,0.3) !important;
-    color: white !important;
-    font-size: 16px !important;
-    padding: 12px !important;
-    box-sizing: border-box !important;
-}
-
-.custom-form textarea.wpcf7-textarea::placeholder {
-    color: rgba(255,255,255,0.7) !important;
-    font-size: 16px !important;
-}
-
-/* Ensure the message field container spans full width */
-.custom-form p:has(textarea) {
-    width: 100% !important;
-    clear: both !important;
-}
-</style>
-
-<script>
-// Override CF7's form submission
-document.querySelector('.custom-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    
-    // Show spinner
-    const submitBtn = this.querySelector('input[type="submit"]');
-    submitBtn.disabled = true;
-    submitBtn.classList.add('spinning');
-    
-    // Submit to Formspree
-    fetch('https://formspree.io/f/xblydarw', {
-        method: 'POST',
-        body: new FormData(this),
-        headers: {
-            'Accept': 'application/json'
-        }
-    }).then(response => {
-        if (response.ok) {
-            alert('Thank you! Your message has been sent.');
-            this.reset();
-        } else {
-            alert('Oops! There was a problem submitting your form');
-        }
-    }).catch(error => {
-        alert('Oops! There was a problem submitting your form');
-    }).finally(() => {
-        submitBtn.disabled = false;
-        submitBtn.classList.remove('spinning');
-    });
-});
-</script>
-</form>
+<!-- Start of Meetings Embed Script -->
+    <div class="meetings-iframe-container" data-src="https://meetings-na2.hubspot.com/frank-shaw?embed=true"></div>
+    <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+  <!-- End of Meetings Embed Script -->
 </div>
 <div class="fusion-clearfix"></div>
 </div></div>
