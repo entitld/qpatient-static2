@@ -1,6 +1,6 @@
-# QPatient - Medical Practice Website
+# QPatient - Registered Qualifying Patient Advisor's Official Website 
 
-A professional, responsive static website for a medical practice featuring modern design, accessibility, and seamless patient communication.
+Responsive static website for a medical patient advisor to make appointments to hear patient concerns.
 
 ## 🌟 Features
 
